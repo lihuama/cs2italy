@@ -175,21 +175,87 @@
         <!-- <h3 class="sub-heading">More information will be available soon.</h3> -->
 
         <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-
-          <!-- Schedule Day 1 -->
+	<br/>
 	  <h2>Day 1: Tutorials in parallel sessions</h2>
 	  <h3>(Wednesday, 15 January 2025)</h3>
 
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
+	   {% for day1 in site.data.program_day1 %}
+            	<div class="row schedule-item">
+	      		<div class="col-md-2">
+				<time>{{ day1.schedule }}</time>
+			</div>
+              		<div class="col-md-10">
+				<h4>{{ day1.session }}</h4>
+                		<p>Speakers:</p>
+              		</div>
+            	</div>
+	   {% endfor %}
+	  </div>
+	</div>
+	<br/>
+        <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+	<br/>
+	  <h2>Day 2: Main Conference</h2>
+	  <h3>(Thursday, 16 January 2025)</h3>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 AM</time></div>
-              <div class="col-md-10">
-                <h4>Opening</h4>
-                <p>Speakers:</p>
-              </div>
-            </div>
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-2">
+	   {% for day2 in site.data.program_day2 %}
+            	<div class="row schedule-item">
+	      		<div class="col-md-2">
+				<time>{{ day2.schedule }}</time>
+			</div>
+              		<div class="col-md-10">
+				<h4>{{ day2.session }}</h4>
+                		<p>Speakers:</p>
+              		</div>
+            	</div>
+	   {% endfor %}
+	  </div>
+	</div>
+	<br/>
+        <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <br/>
+	  <h2>Day 3: Main Conference</h2>
+	  <h3>(Friday, 17 January 2025)</h3>
 
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-3">
+	   {% for day3 in site.data.program_day3 %}
+            	<div class="row schedule-item">
+	      		<div class="col-md-2">
+				<time>{{ day3.schedule }}</time>
+			</div>
+              		<div class="col-md-10">
+				<h4>{{ day3.session }}</h4>
+                		<p>Speakers:</p>
+              		</div>
+            	</div>
+	   {% endfor %}
+	  </div>
+	</div>
+	<br/>
+        <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <br/>
+	  <h2>Day 4: Establishment of the Society Computational Social Science Italy  (CS2Italy)</h2>
+	  <h3>(Saturday, 18 January 2025)</h3>
+
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-4">
+	   {% for day4 in site.data.program_day4 %}
+            	<div class="row schedule-item">
+	      		<div class="col-md-2">
+				<time>{{ day4.schedule }}</time>
+			</div>
+              		<div class="col-md-10">
+				<h4>{{ day4.session }}</h4>
+                		<p>Speakers:</p>
+              		</div>
+            	</div>
+	   {% endfor %}
+	  </div>
+	</div>
+
+
+	<!--
             <div class="row schedule-item">
               <div class="col-md-2"><time>09:40 AM</time></div>
               <div class="col-md-10">
@@ -200,13 +266,10 @@
                 <p>More info soon.</p>
               </div>
             </div>
-
-            <div class="row schedule-item">
+            
+	    <div class="row schedule-item">
               <div class="col-md-2"><time>10:25 AM</time></div>
               <div class="col-md-10">
-                <!-- <div class="speaker">
-                  <img src="assets/img/speakers/2.jpg" alt="Paper Session 1">
-                </div> -->
                 <h4>Paper Session #1</h4>
                 <p>More info on Session 1.</p>
               </div>
@@ -215,9 +278,6 @@
             <div class="row schedule-item">
               <div class="col-md-2"><time>11:15 AM</time></div>
               <div class="col-md-10">
-                <!-- <div class="speaker">
-                  <img src="assets/img/speakers/3.jpg" alt="Cole Emmerich">
-                </div> -->
                 <h4>Coffee Break</h4>
               </div>
             </div>
@@ -225,9 +285,6 @@
             <div class="row schedule-item">
               <div class="col-md-2"><time>11:30 AM</time></div>
               <div class="col-md-10">
-                <!-- <div class="speaker">
-                  <img src="assets/img/speakers/4.jpg" alt="Jack Christiansen">
-                </div> -->
                 <h4>Paper Session #2</h4>
                 <p>More info on Session 2.</p>
               </div>
@@ -236,9 +293,6 @@
             <div class="row schedule-item">
               <div class="col-md-2"><time>12:20 PM</time></div>
               <div class="col-md-10">
-                <!-- <div class="speaker">
-                  <img src="assets/img/speakers/5.jpg" alt="Alejandrin Littel">
-                </div> -->
                 <h4>Panel Session</h4>
                 <p>White-Paper Drafting on Decentralizing the Web</p>
               </div>
@@ -247,18 +301,12 @@
             <div class="row schedule-item">
               <div class="col-md-2"><time>13:20 PM</time></div>
               <div class="col-md-10">
-                <!-- <div class="speaker">
-                  <img src="assets/img/speakers/6.jpg" alt="Willow Trantow">
-                </div> -->
                 <h4>Closing Remarks</h4>
                 <p>Speakers: Workshop Organizers</p>
               </div>
             </div>
-
-          </div>
-          <!-- End Schdule Day 1 -->
-        </div>
-      </div>
+	</div>
+      </div>-->
 
     </section><!-- End Schedule Section -->
 

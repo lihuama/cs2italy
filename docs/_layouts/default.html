@@ -53,12 +53,12 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#home">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">The Conference</a></li>
-          <li><a class="nav-link scrollto" href="#cfp">Call for Papers</a></li>
-          <li><a class="nav-link scrollto" href="#dates">Dates & Submission</a></li>
+          <li><a class="nav-link scrollto" href="#cfp">Topics</a></li>
+          <li><a class="nav-link scrollto" href="#dates">Dates</a></li>
           <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
           <li><a class="nav-link scrollto" href="#schedule">Program</a></li>
-          <li><a class="nav-link scrollto" href="#registration">Registration</a></li>
-          <li><a class="nav-link scrollto" href="#whitepaper">White-Paper</a></li>
+          <!--<li><a class="nav-link scrollto" href="#registration">Registration</a></li>
+	  <li><a class="nav-link scrollto" href="#whitepaper">White-Paper</a></li>-->
           <li><a class="nav-link scrollto" href="#venue">Venue</a></li>
           <li><a class="nav-link scrollto" href="#organizers">Organization</a></li>
         </ul>
@@ -121,55 +121,17 @@
       <br>
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Dates & Submissions</h2>
+          <h2>Dates</h2>
         </div>
-
-        <center>
-          <h3>Important Dates</h3>
-          <h4>
-            <p>
-              <b>Submission Deadline:</b> March 24, 2024<br>
-              <b>Notifications:</b> April 14, 2024<br>
-              <b>Camera-Ready Due:</b> May 5, 2024<br>
-              <b>Workshop Day:</b> June 3, 2024<br>
-            </p>
-          </h4>
-
-          <h5>All deadlines are 11:59 PM <a href="https://time.is/Anywhere_on_Earth">AOE (Anywhere On Earth)</a></h5>
-        </center>
-        <br>
-        <center>
-          <h3>Submission Instructions</h3>
-          <h5><b>Submit via the EasyChair portal: <a
-                href="https://easychair.org/conferences/?conf=CS2Italy">https://easychair.org/conferences/?conf=CS2Italy</a></b>
-          </h5>
-        </center>
-
-        We welcome both <b>2-page abstracts</b>, as well as <b>short (4 pages) papers</b> - not counting references and
-        appendices (if applicable). Abstracts are ideal for position papers or discussion papers of previously published
-        work. Short papers must contain <b>original work</b>, and are best suited for technical contributions, demos,
-        datasets, or early-stage research with experimental results.
-
-        <br><br>
-        All submissions should be <b>double-blind</b> and in <b>English</b>, and have to follow the <a
-          href="https://www.overleaf.com/latex/templates/aaai-2023-author-kit/wxnmhzcrjbpc">AAAI two-column,
-          camera-ready style</a>. Submitted papers must adhere to the <a
-          href="https://www.icwsm.org/2024/index.html/call_for_submissions.html#guidelines">ICWSM guidelines</a>, but
-        authors <u>do not need</u> to compile the ethics checklist required for submissions to the main research track
-        of ICWSM.
-
-        <br><br>
-        The <b>accepted short papers</b> (<u>not the 2-page abstracts</u>) will be published in the <b>ICWSM Workshop
-          Proceedings</b> (<a
-          href="https://workshop-proceedings.icwsm.org/">https://workshop-proceedings.icwsm.org/</a>) by the AAAI Press.
-
-        <br><br>
-        The CS2Italy workshop is expected to be in person, and we encourage you to attend in person to fully engage
-        with the community. However, we are also planning a virtual option for those who cannot attend in person. More
-        details will be provided soon.
-
-        <center><b>Please, contact the organizers for questions related to the submission or participation.</b></center>
-
+	<div class="row">
+               <div class="col-lg-1">&nbsp;</div>
+                <div class="col-lg-10">
+                <p>
+	{% if page.dates %} {% capture dates %}{% include_relative _texts/{{ page.dates }}%}{% endcapture %} {{ dates | markdownify }} {% endif %}
+                </p>
+                </div>
+                <div class="col-lg-1">&nbsp;</div>
+	</div>
 
     </section><!-- End Topics Section -->
 
@@ -297,7 +259,7 @@
 
     </section><!-- End Schedule Section -->
 
-    <!-- ======= Registration Section ======= -->
+    <!-- ======= Registration Section ======= >
     <section id="registration">
       <br><br>
       <div class="container" data-aos="fade-up">
@@ -312,7 +274,7 @@
 
     </section><!-- End Registration Section -->
 
-    <!-- ======= White-Paper Section ======= -->
+    <!-- ======= White-Paper Section ======= 
     <section id="whitepaper">
       <br>
       <div class="container" data-aos="fade-up">

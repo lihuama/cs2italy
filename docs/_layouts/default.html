@@ -51,8 +51,8 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">The Workshop</a></li>
+          <li><a class="nav-link scrollto active" href="#home">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">The Conference</a></li>
           <li><a class="nav-link scrollto" href="#cfp">Call for Papers</a></li>
           <li><a class="nav-link scrollto" href="#dates">Dates & Submission</a></li>
           <li><a class="nav-link scrollto" href="#speakers">Speakers</a></li>
@@ -69,7 +69,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+  <section id="home">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
 	    <h1 class="mb-4 pb-0"><span>{{ site.title }}</span>{{ site.year}}<br>1st Conference<br>On <span>Computational</span> Social Science</h1>
 	    <p class="mb-4 pb-0">{{ site.organizers }}</p>
@@ -84,12 +84,14 @@
     <section id="about">
       <div class="container position-relative" data-aos="fade-up">
         <div class="row">
-          <div class="col-lg-12">
+	  <div class="col-lg-1">&nbsp;</div>
+          <div class="col-lg-10">
             <h2>About The Conference</h2>
-	    <p>
+	    <p class="mb-4 pb-0">
 	    {% if page.about %} {% capture about %}{% include_relative _texts/{{ page.about }}%}{% endcapture %} {{ about | markdownify }} {% endif %}
 	    </p>
           </div>
+	  <div class="col-lg-1">&nbsp;</div>
         </div>
       </div>
     </section><!-- End About Section -->
@@ -97,16 +99,21 @@
 
     <!-- ======= CfP Section ======= -->
     <section id="cfp">
-      <br>
       <div class="container" data-aos="fade-up" class="section-with-bg">
         <div class="section-header">
-          <h2>Topics</h2>
+	<br/>  
+	<h2>Topics</h2>
         </div>
-	We welcome submissions on any topic in the field of computational social science, including but not limited to:
-	<p>
-	{% if page.topics %} {% capture topics %}{% include_relative _texts/{{ page.topics }}%}{% endcapture %} {{ topics | markdownify }} {% endif %}
-	</p>
-
+	<div class="row">
+		<div class="col-lg-1">&nbsp;</div>
+		<div class="col-lg-10">
+		We welcome submissions on any topic in the field of computational social science, including but not limited to:
+		<p>
+		{% if page.topics %} {% capture topics %}{% include_relative _texts/{{ page.topics }}%}{% endcapture %} {{ topics | markdownify }} {% endif %}
+		</p>
+		</div>
+		<div class="col-lg-1">&nbsp;</div>
+	</div>
     </section><!-- End CfP Section -->
 
     <!-- ======= Submissions Section ======= -->
@@ -410,81 +417,36 @@
         <div class="section-header">
           <h2>Organizers</h2>
         </div>
-
-        <div class="row">
+	<div class="row">
+	{% for organizer in site.data.organizers %}
           <div class="col-lg-3 col-md-4">
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/organizers/ivanobison.jpeg" alt="Ivano Bison" class="img-fluid">
+		    <img src="assets/img/organizers/{{ organizer.picture }}" alt="{{ organizer.name }}" class="img-fluid grayscale">
               <div class="details">
-                <h3><a href="https://www.linkedin.com/in/ivano-bison-75b7b926a/">Ivano Bison</a></h3>
-                <p> Full Professor, University of Trento, Computational Social Scientist </p>
+		      <h3><a href="https://www.linkedin.com/in/{{ organizer.linkedin }}">{{ organizer.name }}</a></h3>
+		      <p> {{ organizer.position }}, {{ organizer.affiliation }}</p>
                 <div class="social">
-                  <a href="mailto:ivano.bison@unitn.it"><i class="bi bi-envelope"></i></a>
-                  <a href="https://twitter.com/IvanoBison"><i class="bi bi-twitter"></i></a>
-                  <a href="https://www.linkedin.com/in/ivano-bison-75b7b926a/"><i class="bi bi-linkedin"></i></a>
+			<!--<a href="mailto:ivano.bison@unitn.it"><i class="bi bi-envelope"></i></a>-->
+			<a href="https://x.com/{{ organizer.twitter }}"><i class="bi bi-twitter"></i></a>
+			<a href="https://www.linkedin.com/in/{{ organizer.linkedin }}"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/img/organizers/aiello.png" alt="Luca Maria Aiello" class="img-fluid">
-              <div class="details">
-                <h3><a href="https://www.lajello.com/">Luca Maria Aiello</a></h3>
-                <p>Assoc. Professor @ ITU Copenhagen</p>
-                <div class="social">
-                  <a href="https://www.lajello.com/"><i class="bi bi-globe"></i></a>
-                  <a href="https://twitter.com/lajello"><i class="bi bi-twitter"></i></a>
-                  <a href="https://linkedin.com/in/lucamariaaiello"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/img/organizers/baronchelli.jpg" alt="Andrea Baronchelli" class="img-fluid">
-              <div class="details">
-                <h3><a href="https://www.andreabaronchelli.com/">Andrea Baronchelli</a></h3>
-                <p>Professor @ City, University of London</p>
-                <div class="social">
-                  <a href="https://www.andreabaronchelli.com/"><i class="bi bi-globe"></i></a>
-                  <a href="https://twitter.com/a_baronca"><i class="bi bi-twitter"></i></a>
-                  <a href="https://www.linkedin.com/in/baronka"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/img/organizers/micheletizzoni.jpeg" alt="Michele Tizzoni" class="img-fluid">
-              <div class="details">
-                <h3><a href="https://micheletizzoni.github.io">Michele Tizzoni</a></h3>
-                <p>Assistant Professor at University of Trento</p>
-                <div class="social">
-                  <a href="https://micheletizzoni.github.io/"><i class="bi bi-globe"></i></a>
-		  <a href="https://twitter/com/mtizzoni/"><i class="bi bi-twitter"></i></a>
-                  <a href="https://www.linkedin.com/in/micheletizzoni/"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+	{% endfor %}
+	</div>
       </div>
       <br><br>
       <div class="section-header">
-        <h2>Program Committee</h2>
+        <h2>Scientific Committee</h2>
         <center>
           <h5>
-            <p>
-              Shirin Nilizadeh, <i>University of Texas at Arlington</i>
-              <br>
-              Alessia Galdeman, <i>Università degli Studi di Milano</i>
-              <br>
-              Gareth Tyson, <i>Hong Kong University of Science and Technology</i>
-              <br>
-              Matteo Zignani, <i>Università degli Studi di Milano</i>
-            </p>
-          </h5>
+	   {% for member in site.data.scientific_committee %}	
+	   <p>
+	   {{ member.name }}, <i>{{ member.affiliation}}, {{ member.location }}</i>
+	   </p>
+	    {% endfor %}
+	  </h5>
         </center>
       </div>
     </section><!-- End Organizers Section -->

@@ -1,5 +1,5 @@
 ## Computational Social Science Theory
-- Theoretical work that generates new insights, connections, and frameworks for computational social science research.
+*Theoretical work that generates new insights, connections, and frameworks for computational social science research*
 - Theoretical discussions/concepts in computational social science
 - Science and technology studies approach to computational science work
 - Practical problems in computational social science
@@ -7,7 +7,7 @@
 - Ethics of computational research on human behavior
 
 ## Data-Driven Social Science
-- Data-driven work that describes and discovers social and cultural phenomena or explains and estimates relations between them and the larger society.
+*Data-driven work that describes and discovers social and cultural phenomena or explains and estimates relations between them and the larger society.*
 - Network analysis of social systems
 - Methods and issues of social data collection
 - Large-scale social experiments and phenomena
@@ -19,7 +19,7 @@
 - Computational social science research in industry, government, and philanthropy
 
 ## Method Exploration
-- Work that advances methods and approaches for computational social science.
+*Work that advances methods and approaches for computational social science.*
 - Methods and analyses of integrated human-machine decision-making
 - Methods and analyses of biased, selective, or incomplete observational social data
 - Methods and analyses for social information / digital communication dynamics

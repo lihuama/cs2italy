@@ -4,15 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>CS2Italy</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>{{ site.title }}</title>
+  <meta content="{{ site.description }}" name="description">
+  <meta content="{{ site.keywords }}" name="keywords">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="asset/img/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="asset/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="asset/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
   <link rel="manifest" href="asset/img/site.webmanifest">
 
 
@@ -72,10 +71,9 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0"><span>CS2Italy</span>2024<br>1st Conference<br>On <span>Computational</span> Social Science</h1>
-      <p class="mb-4 pb-0">...
-      </p>
-      <p class="mb-4 pb-0">Monday, June 3rd, 2024 -Trento, Italy</p>
+	    <h1 class="mb-4 pb-0"><span>{{ site.title }}</span>{{ site.year}}<br>1st Conference<br>On <span>Computational</span> Social Science</h1>
+	    <p class="mb-4 pb-0">{{ site.organizers }}</p>
+	    <p class="mb-4 pb-0">{{ site.datelocation }}</p>
       <a href="#about" class="about-btn scrollto">About the Conference</a>
     </div>
   </section><!-- End Hero Section -->
@@ -87,32 +85,10 @@
       <div class="container position-relative" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-12">
-            <h2>About The Workshop</h2>
-            <p><b>Decentralizing the Web</b> is a trend that gained remarkable momentum in recent years, fueled by a
-              collective
-              desire to redefine our engagement with online platforms. The conventional centralized vision of the Web is
-              being challenged by a growing interest in decentralizing control and interactions, which finds its most
-              profound expression in socio-economic systems. Illustrative examples of this transformative shift include
-              the increasing attention received by <b>Decentralized Online Social Media</b> platforms with the so-called
-              <b>Fediverse</b>, and the emergence of <b>Web3</b>.
-
-              <br><br>
-
-              This workshop aims to comprehensively explore the burgeoning landscape of decentralized socio-economic web
-              platforms, seeking to shed light on the key challenges and opportunities inherent in this paradigm.
-              Particular emphasis will be placed on understanding the impact of decentralization on user behavior, and
-              the emergence of novel forms of cooperation driven by the lack of centralized control.
-
-              <br><br>
-
-              We believe investigating these points becomes now crucial for researchers across different fields,
-              including computer science, human-computer interactions, and computational social science, due to the
-              increasing pervasiveness of such paradigm shift.
-              This workshop is intended to foster interdisciplinary discussions, facilitating collaboration among
-              diverse
-              research communities to unravel the intricate complexities and implications of decentralizing the web,
-              thereby playing a pivotal role in shaping the future of online platforms and interactions.
-            </p>
+            <h2>About The Conference</h2>
+	    <p>
+	    {% if page.about %} {% capture about %}{% include_relative _texts/{{ page.about }}%}{% endcapture %} {{ about | markdownify }} {% endif %}
+	    </p>
           </div>
         </div>
       </div>
@@ -122,36 +98,14 @@
     <!-- ======= CfP Section ======= -->
     <section id="cfp">
       <br>
-      <div class="container" data-aos="fade-up">
+      <div class="container" data-aos="fade-up" class="section-with-bg">
         <div class="section-header">
           <h2>Topics</h2>
         </div>
-
-        <p>This workshop seeks to esplore contributions ranging multiple research fields, such as <b>Network
-            Science</b>, <b>Natural Language Processing</b>, and <b>Computational Social Science</b>, aiming to
-          facilitate the exchange of <b>methodologies</b> and <b>empirical findings</b> to foster a deeper understanding
-          of the dynamics of the Decentralized Web.
-
-          <br>
-          The <b>topics of interest</b> of the CS2Italy workshop at ICWSM2024 include but are not limited to:
-
-        <ul>
-          <li> Structures and dynamics in decentralized platforms</li>
-          <li> Graph mining in decentralized platforms</li>
-          <li> NLP in decentralized platforms</li>
-          <li> Decentralized social interactions</li>
-          <li> Decentralized currencies and finance</li>
-          <li> Coordinated and cooperative user behaviors within decentralized platforms</li>
-          <li> Migratory phenomena towards decentralized platforms</li>
-          <li> Misinformation, disinformation, and fake news in decentralized platforms</li>
-          <li> Content moderation in decentralized platforms</li>
-          <li> Community search, detection, and evolution in decentralized platforms</li>
-          <li> Polarization phenomena in decentralized platforms</li>
-          <li> Fraudulent activities in decentralized platforms</li>
-          <li> Ethical and privacy aspects of decentralized platforms</li>
-          <li> Dataset and resources for studying decentralized platforms</li>
-        </ul>
-        </p>
+	We welcome submissions on any topic in the field of computational social science, including but not limited to:
+	<p>
+	{% if page.topics %} {% capture topics %}{% include_relative _texts/{{ page.topics }}%}{% endcapture %} {{ topics | markdownify }} {% endif %}
+	</p>
 
     </section><!-- End CfP Section -->
 

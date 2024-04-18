@@ -25,7 +25,6 @@ most are visibile on the landing page<br/>
 ## texts
 In the directory [_texts](_texts) there are markdown structured files.
 * [01_about.md](docs/_texts/01_about.md) contains the description of the main website<br/><img src="screenshots/01_about.jpg" width="200px"/>
-
 * [02_topics.md](docs/_texts/02_topics.md) contains the description of the main website<br/><img src="screenshots/02.png" width="200px"/>
 * [03_dates.md](docs/_texts/03_dates.md) contains the description of the main website<br/><img src="screenshots/03.png" width="200px"/>
 

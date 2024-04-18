@@ -9,7 +9,7 @@ The directory that contains everything is [docs]()<Br/>
 note: the screenshots here can change during the creation of the website
 
 ## basic information
-in the file [_config.yml](docs/_config.yml] you can define some basic information like 
+in the file [_config.yml](docs/_config.yml) you can define some basic information like 
 ```yaml
 title: CS2Italy 
 description: >- # this means to ignore newlines until "baseurl:"

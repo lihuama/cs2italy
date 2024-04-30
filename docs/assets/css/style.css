@@ -794,6 +794,10 @@ h6 {
   color: #fff;
 }
 
+.member {
+  color: #1f78b4;
+}
+
 #speakers-details .details .social a i {
   font-size: 16px;
   line-height: 0;

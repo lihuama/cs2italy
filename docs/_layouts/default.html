@@ -80,21 +80,29 @@
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
     <section id="about">
       <div class="container position-relative" data-aos="fade-up">
         <div class="row">
-	  <div class="col-lg-1">&nbsp;</div>
-          <div class="col-lg-10">
-            <h2>About The Conference</h2>
-	          <p class="mb-4 pb-0">
-	           {% if page.about %} {% capture about %}{% include_relative _texts/{{ page.about }}%}{% endcapture %} {{ about | markdownify }} {% endif %}
-	            </p>
+          <div class="col-lg-6">
+            <h2>About The Event</h2>
+            <p>{% if page.about %} {% capture about %}{% include_relative _texts/{{ page.about }}%}{% endcapture %} {{ about | markdownify }} {% endif %}
+            </p>
           </div>
-	  <div class="col-lg-1">&nbsp;</div>
+          <div class="col-lg-3">
+            <h3>Where</h3>
+            <p>{{ site.where }}</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>When</h3>
+            <p>{{ site.when }}</p>
+          </div>
+        </div>
+        <div class="row">
+          {{ site.intro }}
         </div>
       </div>
     </section><!-- End About Section -->
+
 
 
     <!-- ======= CfP Section ======= -->
@@ -117,7 +125,7 @@
     </section><!-- End CfP Section -->
 
     <!-- ======= Submissions Section ======= -->
-    <section id="dates">
+    <section id="dates" class="section-with-bg">
       <br>
       <div class="container" data-aos="fade-up">
         <div class="section-header">
@@ -169,8 +177,8 @@
      <section id="schedule" class="section-with-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Event Schedule</h2>
-          <p>Here is our event schedule</p>
+          <h2>Program</h2>
+          <p>scheduled planning</p>
         </div>
 
         <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
@@ -284,82 +292,25 @@
 
     </section><!-- End Schedule Section -->
 
-
-	<!--
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>09:40 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="assets/img/speakers/placeholder.png" alt="Placeholder">
-                </div>
-                <h4>Keynote <span>TBC</span></h4>
-                <p>More info soon.</p>
-              </div>
-            </div>
-            
-	    <div class="row schedule-item">
-              <div class="col-md-2"><time>10:25 AM</time></div>
-              <div class="col-md-10">
-                <h4>Paper Session #1</h4>s
-                <p>More info on Session 1.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:15 AM</time></div>
-              <div class="col-md-10">
-                <h4>Coffee Break</h4>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:30 AM</time></div>
-              <div class="col-md-10">
-                <h4>Paper Session #2</h4>
-                <p>More info on Session 2.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:20 PM</time></div>
-              <div class="col-md-10">
-                <h4>Panel Session</h4>
-                <p>White-Paper Drafting on Decentralizing the Web</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>13:20 PM</time></div>
-              <div class="col-md-10">
-                <h4>Closing Remarks</h4>
-                <p>Speakers: Workshop Organizers</p>
-              </div>
-            </div>
-	</div>
-      </div>-->
-
-    </section><!-- End Schedule Section -->
-
-
     <!-- ======= Registration Section ======= >-->
     <section id="registrationfees">
-      <br><br>
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Registration fees</h2>
+          <h2>Registration</h2>
+        </div>
+        <div class="row">
           {% if page.registrationfees %} {% capture registrationfees %}{% include_relative _texts/{{ page.registrationfees }}%}{% endcapture %} {{ registrationfees | markdownify }} {% endif %}
-          </div>
-    
+        </div>
+      </div>
     </section><!-- End Registration Section -->
 
 
         <!-- ======= Supporters Section ======= -->
-        <section id="supporters" class="section-with-bg">
-
-          <div class="container" data-aos="fade-up">
-            <div class="section-header">
-              <h2>Sponsors</h2>
-            </div>
+    <section id="supporters" class="section-with-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Sponsors</h2>
+        </div>
             <div class="row">
               {% if page.sponsors %} {% capture sponsors %}{% include_relative _texts/{{ page.sponsors }}%}{% endcapture %} {{ sponsors | markdownify }} {% endif %}
             </div>
@@ -426,7 +377,6 @@
               </a>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
               <a href="assets/img/gallery/trento3.jpg" class="glightbox" data-gall="venue-gallery" data-title="Loggia in Buonconsiglio Castle by Carolyn Derstine">
@@ -434,10 +384,9 @@
               </a>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-4">
             <div class="venue-gallery">
-              <a href="assets/img/gallery/trento4.jpg" class="glightbox" data-gall="venue-gallery"  data-title="Piedicastello by Roberto Zanin"></a>>
+              <a href="assets/img/gallery/trento4.jpg" class="glightbox" data-gall="venue-gallery"  data-title="Piedicastello by Roberto Zanin"></a>
                 <img src="assets/img/gallery/trento4.jpg" alt="" class="img-fluid">
               </a>
             </div>
@@ -451,7 +400,7 @@
 
 
     <!-- ======= Organizers Section ======= -->
-    <section id="organizers">
+    <section id="organizers" class="section-with-bg">
       <br>
       <div class="container" data-aos="fade-up">
         <div class="section-header">

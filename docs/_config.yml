@@ -5,7 +5,10 @@ description: >- # this means to ignore newlines until "baseurl:"
 keywords: conference, cs2italy, computational social science, trento, italy, fbk
 year: 2025
 datelocation: 16-17 January 2025 -Trento, Italy
+when: Wednesday to Saturday 16-17 January 2025
+where: Department of Sociology and Social Research - Trento, Italy
 organizers: University of Trento
+intro: The 2025 edition of the CS2 Italy Conference will lead to the establishment of the Society Computational Social Science Italy (CS2 Italy), the first scientific association of all Italian scholars working in the field of computational social science.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
